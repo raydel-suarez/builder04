@@ -1,7 +1,11 @@
+/* ═══════════════════════════════════════════
+   css/variables.css — Design tokens globales
+   ═══════════════════════════════════════════ */
+
 :root {
   --primary:      #7600ff;
   --primary-soft: #9752ff;
-  --accent:       #bba2ff;
+  --accent:       #d4bbff;
   --secondary:    #22016b;
   --background:   #12003d;
   --surface:      #1b0056;

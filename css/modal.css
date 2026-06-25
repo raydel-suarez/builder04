@@ -1,0 +1,14 @@
+.overlay { display: none; position: fixed; inset: 0; background: rgba(18,0,61,.82); z-index: 2000; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+.overlay.open { display: flex; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px 24px; width: 90%; max-width: 440px; box-shadow: 0 28px 72px rgba(0,0,0,.55); }
+.modal h3 { font-family: 'Oswald', sans-serif; font-size: 1.05rem; letter-spacing: 1.5px; color: var(--accent); margin-bottom: 20px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-family: 'PT Mono', monospace; font-size: 0.63rem; color: var(--text-muted); letter-spacing: .7px; text-transform: uppercase; margin-bottom: 5px; }
+.field input, .field select { width: 100%; padding: 9px 12px; background: var(--background); border: 1px solid var(--border); border-radius: 7px; color: var(--paper); font-family: 'Montserrat', sans-serif; font-size: 0.87rem; outline: none; transition: border-color .15s; -webkit-appearance: none; appearance: none; }
+.field input:focus, .field select:focus { border-color: var(--primary-soft); }
+.field input.error { border-color: var(--danger) !important; }
+.field select option { background: var(--surface); color: var(--paper); }
+.field input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(.7) sepia(1) saturate(4) hue-rotate(220deg); cursor: pointer; }
+.modal-foot { display: flex; gap: 10px; margin-top: 22px; }
+.modal-foot .btn-ghost { flex: 1; }
+.modal-foot .btn-primary { flex: 2; }

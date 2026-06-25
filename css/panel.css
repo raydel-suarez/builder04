@@ -1,0 +1,14 @@
+.task-panel { flex: 0 0 30%; max-width: 380px; min-width: 260px; background: var(--surface); border-left: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
+.panel-head { padding: 16px 18px 12px; border-bottom: 1px solid var(--border); background: var(--secondary); flex-shrink: 0; }
+.panel-head-row { display: flex; align-items: center; justify-content: space-between; }
+.panel-head h2 { font-family: 'Oswald', sans-serif; font-size: 0.95rem; letter-spacing: 1.5px; color: var(--accent); }
+.btn-close-panel { display: none; background: transparent; border: none; color: var(--text-muted); font-size: 1.1rem; cursor: pointer; padding: 2px 6px; border-radius: 4px; line-height: 1; }
+.btn-close-panel:hover { background: var(--border); color: var(--paper); }
+.panel-date { margin-top: 5px; font-size: 0.76rem; color: var(--text-muted); font-weight: 400; }
+.panel-date.is-overdue { color: var(--danger); }
+.panel-body { flex: 1; overflow-y: auto; padding: 14px; min-height: 0; }
+.panel-foot { padding: 14px; border-top: 1px solid var(--border); flex-shrink: 0; }
+.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 36px 16px; color: var(--text-muted); height: 100%; min-height: 180px; }
+.placeholder svg { width: 40px; height: 40px; opacity: .28; margin-bottom: 14px; flex-shrink: 0; }
+.placeholder h3 { font-family: 'Oswald', sans-serif; font-size: 0.9rem; letter-spacing: 1px; color: var(--accent); opacity: .5; margin-bottom: 7px; }
+.placeholder p { font-size: 0.78rem; line-height: 1.6; }

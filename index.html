@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>TaskCal — Gestión de Tareas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Montserrat:wght@400;500&family=PT+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="css/panel.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">TASKCAL</div>
+  <div class="year-nav">
+    <button id="btnPrevYear" aria-label="Año anterior">&#8592;</button>
+    <span class="year-label" id="yearLabel"></span>
+    <button id="btnNextYear" aria-label="Año siguiente">&#8594;</button>
+  </div>
+</header>
+<div class="layout">
+  <div class="cal-section">
+    <div class="half-nav">
+      <button class="half-tab" id="btnHalf0">Ene &ndash; Jun</button>
+      <button class="half-tab active" id="btnHalf1">Jul &ndash; Dic</button>
+    </div>
+    <div class="cal-grid" id="calGrid"></div>
+  </div>
+  <aside class="task-panel" id="taskPanel">
+    <div class="panel-head">
+      <div class="panel-head-row">
+        <h2>TAREAS DEL DÍA</h2>
+        <button class="btn-close-panel" id="btnClosePanel" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <div class="panel-date" id="panelDate">Selecciona un día del calendario</div>
+    </div>
+    <div class="panel-body" id="panelBody"></div>
+    <div class="panel-foot" id="panelFoot" style="display:none">
+      <button class="btn-primary" id="btnAddTask">+ Agregar tarea</button>
+    </div>
+  </aside>
+</div>
+<div class="overlay" id="taskOverlay" role="dialog" aria-modal="true">
+  <div class="modal">
+    <h3 id="modalTitle">NUEVA TAREA</h3>
+    <div class="field"><label for="fTitle">Título</label><input type="text" id="fTitle" placeholder="¿Qué tienes que hacer?" autocomplete="off" maxlength="200"></div>
+    <div class="field"><label for="fPriority">Prioridad</label><select id="fPriority"><option value="Alta">Alta</option><option value="Media" selected>Media</option><option value="Baja">Baja</option></select></div>
+    <div class="field"><label for="fStatus">Estado</label><select id="fStatus"><option value="Pendiente" selected>Pendiente</option><option value="En curso">En curso</option><option value="Completada">Completada</option></select></div>
+    <div class="field"><label for="fDate">Fecha (reasignar día)</label><input type="date" id="fDate"></div>
+    <div class="modal-foot"><button class="btn-ghost" id="btnModalCancel">Cancelar</button><button class="btn-primary" id="btnModalSave">Guardar tarea</button></div>
+  </div>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

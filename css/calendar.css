@@ -1,0 +1,14 @@
+.cal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.month-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.month-name { padding: 8px 12px; background: var(--secondary); font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; color: var(--accent); text-transform: uppercase; }
+.wd-row { display: grid; grid-template-columns: repeat(7,1fr); padding: 6px 5px 2px; gap: 1px; }
+.wd { text-align: center; font-family: 'PT Mono', monospace; font-size: 0.52rem; color: var(--text-muted); text-transform: uppercase; padding: 1px 0; }
+.days-row { display: grid; grid-template-columns: repeat(7,1fr); gap: 1px; padding: 2px 5px 6px; }
+.day { aspect-ratio: 1; border-radius: 4px; display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative; font-size: 0.67rem; font-weight: 500; color: var(--paper); border: 1px solid transparent; transition: background .12s, border-color .12s; user-select: none; }
+.day:hover { background: rgba(151,82,255,.18); border-color: var(--primary-soft); }
+.day.empty { cursor: default; pointer-events: none; }
+.day.today { background: #ffffff !important; border-color: #ffffff !important; box-shadow: 0 4px 20px rgba(255,255,255,.35),0 2px 8px rgba(0,0,0,.4); color: var(--secondary); font-weight: 700; }
+.day.overdue { background: rgba(231,66,53,.12); border-color: var(--danger) !important; color: #ffa0a0; }
+.day.selected { background: rgba(118,0,255,.38) !important; border-color: var(--primary) !important; }
+.badge { position: absolute; top: 0; right: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); color: var(--background); font-family: 'PT Mono', monospace; font-size: 0.46rem; font-weight: 700; display: flex; align-items: center; justify-content: center; line-height: 1; pointer-events: none; }
+.badge.is-overdue { background: var(--danger); color: #fff; }
